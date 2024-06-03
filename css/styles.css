@@ -1,0 +1,566 @@
+/* ************************************************************
+* Simona Češková xcesko00
+* ITW projekt 2
+* 24.02.2022
+************************************************************ */
+
+
+/* ************************** COLORS ************************** */
+
+:root {
+    --light-blue: #693e5c;
+    --darker-blue: #990f2f;
+    --almost-white: #e68d81;
+    --violet: #cf84a7;
+    --just_white: #d1c3ce;
+    --not_white: #dfdddf;
+    --menu-color: #f5c9a0;
+    --graf-color: #b98888;
+    --dark: #2b2d38;
+    --transiton-time: .5s;
+}
+
+
+/* ************************** COLORS ************************** */
+
+
+/* ******************************** OBECNE ****************************** */
+
+
+/* obecne prikazy pro vsechny casti kodu */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--not_white);
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    max-width: 1600px;
+    min-width: 400px;
+}
+
+h1 {
+    font-size: 70px !important;
+    margin: 20px auto 0;
+    font-size: 6rem;
+    color: var(--light-blue);
+}
+
+h3 {
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--darker-blue);
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--darker-blue);
+}
+
+p {
+    color: var(--dark);
+    font-size: 1.4rem;
+}
+
+
+/* ******************************** OBECNE ****************************** */
+
+
+/* ******************************** HEADER ****************************** */
+
+
+/* reseni navigace robrazeni za sebou a aby byla pripnuta po cele dobe */
+
+#header {
+    width: 100%;
+    background-image: url("ikony/footer_bg.gif");
+    object-fit: fill;
+}
+
+.navigation {
+    flex-direction: row;
+    grid-area: nav;
+}
+
+.menu_content {
+    width: 100%;
+    background-color: var(--light-blue);
+    max-width: 1600px;
+}
+
+.menu_content .menu {
+    max-width: var(--max_width);
+    margin: auto;
+}
+
+.menu_content {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+nav .navigation {
+    display: inline;
+    position: sticky;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: row;
+}
+
+nav li i {
+    margin: 2px;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: large;
+    letter-spacing: .05em;
+    text-decoration: None;
+    display: block;
+    margin-left: 30px;
+    padding-top: 2px;
+    color: var(--just_white);
+    padding-right: 10px;
+}
+
+nav a:hover {
+    border-radius: 15px;
+    list-style: none;
+    transition: var(--transiton-time);
+    color: var(--just_white);
+    text-shadow: 1px 1px 10px var(--just_white), 1px 1px 10px var(--just_white);
+}
+
+
+/* ******************************** HEADER ****************************** */
+
+
+/* ******************************** TOP ****************************** */
+
+
+/* uvovdni obrazek s ruzovym pozadim */
+
+#top {
+    background-color: var(--just_white);
+    height: 270px;
+    padding-top: 50px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#top .nekopara {
+    width: 740px;
+    margin-top: 20px;
+}
+
+
+/* ******************************** TOP ****************************** */
+
+
+/* ******************************** MAIN ****************************** */
+
+
+/* uprava main sekce s obrazky */
+
+.chocola {
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+}
+
+.vanila {
+    width: 15%;
+    float: right;
+    margin-right: 35px;
+    margin-top: -35px;
+}
+
+.info {
+    width: 58%;
+    margin: 0 auto;
+    line-height: 2;
+    text-align: left;
+}
+
+
+/* ******************************** MAIN ****************************** */
+
+
+/* ******************************** CLENOVE KAVARNY ****************************** */
+
+
+/* rozdeleny na 2 gridy vedle sebe po sloupcich s popisem 2x pod sebou */
+
+#CA {
+    row-gap: 20px;
+    column-gap: 20px;
+    text-decoration: None;
+    grid-template-columns: 50% 50%;
+    display: grid;
+    margin: auto;
+    position: relative;
+}
+
+#MC {
+    row-gap: 20px;
+    column-gap: 20px;
+    text-decoration: None;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    margin: auto;
+}
+
+.F {
+    grid-row: 1/2;
+}
+
+.S {
+    grid-row: 2/-1;
+}
+
+
+/* ******************************** CLENOVE KAVARNY ****************************** */
+
+
+/* ******************************** DOTS ****************************** */
+
+
+/* rozdeleny sekci pomoci tecek */
+
+.dots {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    border-width: 16px;
+    width: 20%;
+    border-style: none;
+    border-top-style: dotted;
+    border-color: var(--light-blue);
+}
+
+
+/* ******************************** DOTS ****************************** */
+
+
+/* ********************** VISUALNI NOVELA ********************** */
+
+
+/* rozdeleny na 3 gridy vedle sebe po sloupcich, v kazdem jeden graf */
+
+.cols {
+    margin: 0 auto;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: auto auto auto;
+    position: relative;
+    font-weight: bold;
+    width: 60%;
+    font-size: larger;
+}
+
+.left {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 1px 1px 10px var(--just_white), 1px 1px 10px var(--just_white);
+}
+
+.center {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 1px 1px 10px var(--just_white), 1px 1px 10px var(--just_white);
+}
+
+.right {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 1px 1px 10px var(--just_white), 1px 1px 10px var(--just_white);
+}
+
+.left:hover,
+.center:hover,
+.right:hover {
+    transition: var(--transiton-time);
+    box-shadow: 1px 1px 10px var(--light-blue), 1px 1px 10px var(--light-blue);
+}
+
+
+/* ********************** VISUALNI NOVELA ********************** */
+
+
+/* ********************** GRAFY ********************** */
+
+
+/* rozdeleny na 3 gridy vedle sebe po sloupcich, v kazdem jeden graf */
+
+.graf {
+    margin: auto;
+    display: inline-grid;
+    margin: 5px;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background: conic-gradient(var(--menu-color) 0% 7%, var(--almost-white) 7% 67%, var(--violet) 67%);
+}
+
+.circle {
+    margin: auto;
+    display: inline-grid;
+    margin: 5px;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background: conic-gradient(var(--menu-color) 0% 33%, var(--almost-white) 33% 67%, var(--violet) 67%);
+}
+
+.graph {
+    margin: auto;
+    display: inline-grid;
+    margin: 5px;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background: conic-gradient(var(--violet) 0% 56%, var(--graf-color) 56% 72%, var(--almost-white) 72% 98%, var(--menu-color) 98%);
+}
+
+
+/* ********************** GRAFY ********************** */
+
+
+/* ******************************** MAIN ****************************** */
+
+
+/* ********************** FOOTER ********************** */
+
+
+/* rozdeleny na 3 gridy vedle sebe po sloupcich */
+
+footer {
+    margin: 0 auto;
+}
+
+#footer {
+    background-color: var(--light-blue);
+    padding-bottom: 16px;
+    height: 190px;
+    text-decoration: None;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0 auto;
+    padding-top: 30px;
+    column-gap: 20px;
+}
+
+.first {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.icons {
+    text-decoration: None;
+    font-size: 20px;
+    width: 100%;
+    color: var(--just_white);
+}
+
+.second {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#footer p {
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+footer p {
+    padding-top: 20px;
+    margin-bottom: 5px;
+    color: var(--just_white);
+}
+
+footer a {
+    padding-left: 5px;
+    padding-right: 5px;
+    letter-spacing: .05em;
+    text-decoration: None;
+    display: inline;
+    color: var(--just_white);
+}
+
+.text {
+    text-transform: uppercase;
+}
+
+footer i {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+footer a:hover {
+    border-radius: 15px;
+    list-style: none;
+    transition: var(--transiton-time);
+    color: var(--just_white);
+    text-shadow: 1px 1px 10px var(--just_white), 1px 1px 10px var(--just_white);
+}
+
+footer i:hover {
+    border-radius: 15px;
+    list-style: none;
+    transition: var(--transiton-time);
+    color: var(--just_white);
+    text-shadow: 1px 1px 10px var(--just_white), 1px 1px 10px var(--just_white);
+}
+
+.shy {
+    width: 160px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+.shy:hover,
+.logo:hover {
+    transition: var(--transiton-time);
+    filter: drop-shadow(1px 1px 10px var(--not_white));
+}
+
+.vanila:hover,
+.chocola:hover {
+    filter: drop-shadow(1px 1px 10px var(--violet));
+    transition: var(--transiton-time);
+}
+
+.logo {
+    margin-top: 12px;
+    width: 200px;
+    padding-bottom: 15px;
+    float: right;
+}
+
+
+/* ********************** FOOTER ********************** */
+
+
+/* ********************** MEDIA ********************** */
+
+@media only screen and (max-width: 750px) {
+    /* premena pro mobilni rozliseni */
+    /* vsechny gridy se prelozi do radku pod sebe misto toho aby byly vedle sebe ve sloupcich */
+    /* vsechny objekty se vycentruji na stred */
+    /* ************** GRAFY *************** */
+    .cols {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "a1" "a2" "a3";
+    }
+    .right {
+        grid-row: none;
+        grid-area: a3;
+    }
+    .center {
+        grid-row: none;
+        grid-area: a2;
+    }
+    .left {
+        grid-row: none;
+        grid-area: a1;
+    }
+    /* ************** GRAFY *************** */
+    /* ************** CLENOVE KAVARNY *************** */
+    #CA {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "b1" "b2";
+    }
+    #MC {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "b1" "b2";
+    }
+    .F {
+        grid-row: none;
+        grid-area: b1;
+    }
+    .S {
+        grid-row: none;
+        grid-area: b2;
+    }
+    /* ************** CLENOVE KAVARNY *************** */
+    /* ************** FOOTER *************** */
+    #footer {
+        height: 0;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "f1" "f2" "f3";
+    }
+    .logo,
+    .shy {
+        float: None;
+    }
+    .shy {
+        margin-left: 20px;
+    }
+    .first {
+        justify-items: center;
+        justify-content: center;
+        grid-row: none;
+        grid-area: f1;
+        background-color: #693e5c;
+    }
+    .icons {
+        grid-row: none;
+        background-color: #693e5c;
+        grid-area: f2;
+    }
+    .second {
+        justify-items: center;
+        justify-content: center;
+        grid-row: none;
+        background-color: #693e5c;
+        grid-area: f3;
+    }
+    /* ************** FOOTER *************** */
+    /* ************** MENU *************** */
+    /* reseni navigace do radku pod sebou */
+    .navigation ul {
+        width: auto;
+        display: block;
+        position: sticky;
+    }
+    #top .nekopara {
+        padding-top: 150px;
+        width: 293px;
+    }
+    /* ************** MENU *************** */
+}
